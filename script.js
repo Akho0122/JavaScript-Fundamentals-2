@@ -186,32 +186,58 @@
 // const totals = [bills[0] + tips[0],
 //  bills[1] + tips[1], bills[2] + tips[2]];
 
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Walker',
+//     age: 2022 - 2002,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about Jonas');
+
+// if(jonas[interestedIn]){
+//   console.log(jonas[interestedIn]);
+// }else{
+//     console.log('Wrong request')
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonas';
+// console.log(jonas);
+
+// // Challenge
+// console.log(`jonas has ${jonas.length} friends, and his best friend is ${jonas[0]}`)
+
+
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Walker',
-    age: 2022 - 2002,
+    birthYear: 2002,
     job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function(){
+      this.age =  2022 - this.birthYear;
+      return this.age;
+    },
+    getSummary: function(){
+        return `${this.firstName} is a 
+        ${this.calcAge()}-year old ${this.job}
+        , and he has ${this.hasDriversLicense 
+        ? 'a' : 'no'} driver's license`
+    }
 };
-console.log(jonas);
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
-
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-
-const interestedIn = prompt('What do you want to know about Jonas');
-
-if(jonas[interestedIn]){
-  console.log(jonas[interestedIn]);
-}else{
-    console.log('Wrong request')
-}
-
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonas';
-console.log(jonas);
-
-// Challenge
-console.log(`jonas has ${jonas.length} friends, and his best friend is ${jonas[0]}`)
+console.log(jonas.getSummary());
+console.log(jonas.calcAge()) ;
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
