@@ -282,7 +282,43 @@
 // for(let rep = 1; rep <= 10; rep++){
 //     console.log(`Lifting weights repetition ${rep}`);
 // }
-const jonasArray = [
+// const jonasArray = [
+//     'Jonas', 
+//     'Walker',
+//     2022 - 2002, 
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+
+// const types = [];
+
+// for(let i = 0; i < jonasArray.length; i++) {
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+//     // types[i] = typeof jonasArray[i];
+//     types.push(typeof jonasArray[i]);
+// }
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for(let i = 0; i < years.length; i++) {
+//     ages.push(2022 - years[i]);
+// }
+// console.log(ages);
+
+// // continue and break;
+// for(let i = 0; i < jonasArray.length; i++) {
+//     if(typeof jonasArray[i] !== 'string') continue;
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+
+// for(let i = 0; i < jonasArray.length; i++) {
+//     if(typeof jonasArray[i] === 'number') break;
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+
+const jonas = [
     'Jonas', 
     'Walker',
     2022 - 2002, 
@@ -290,30 +326,13 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven']
 ];
 
-const types = [];
-
-for(let i = 0; i < jonasArray.length; i++) {
-    console.log(jonasArray[i], typeof jonasArray[i]);
-    // types[i] = typeof jonasArray[i];
-    types.push(typeof jonasArray[i]);
-}
-console.log(types);
-
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
-
-for(let i = 0; i < years.length; i++) {
-    ages.push(2022 - years[i]);
-}
-console.log(ages);
-
-// continue and break;
-for(let i = 0; i < jonasArray.length; i++) {
-    if(typeof jonasArray[i] !== 'string') continue;
-    console.log(jonasArray[i], typeof jonasArray[i]);
+for(let i = jonas.length - 1; i >= 0; i--){
+    console.log(jonas[i]);
 }
 
-for(let i = 0; i < jonasArray.length; i++) {
-    if(typeof jonasArray[i] === 'number') break;
-    console.log(jonasArray[i], typeof jonasArray[i]);
+for(let exercise = 1; exercise < 4; exercise++){
+    console.log(`Starting exercise ${exercise}`);
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Exercise${exercise} Lifting weight repetition ${rep}`)
+    }
 }
