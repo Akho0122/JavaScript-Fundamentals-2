@@ -268,17 +268,52 @@
 //     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`)
 // }
 
-console.log('Lifting weights repetition 1');
-console.log('Lifting weights repetition 2');
-console.log('Lifting weights repetition 3');
-console.log('Lifting weights repetition 4');
-console.log('Lifting weights repetition 5');
-console.log('Lifting weights repetition 6');
-console.log('Lifting weights repetition 7');
-console.log('Lifting weights repetition 8');
-console.log('Lifting weights repetition 9');
-console.log('Lifting weights repetition 10');
+// console.log('Lifting weights repetition 1');
+// console.log('Lifting weights repetition 2');
+// console.log('Lifting weights repetition 3');
+// console.log('Lifting weights repetition 4');
+// console.log('Lifting weights repetition 5');
+// console.log('Lifting weights repetition 6');
+// console.log('Lifting weights repetition 7');
+// console.log('Lifting weights repetition 8');
+// console.log('Lifting weights repetition 9');
+// console.log('Lifting weights repetition 10');
 
-for(let rep = 1; rep <= 10; rep++){
-    console.log(`Lifting weights repetition ${rep}`);
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+const jonasArray = [
+    'Jonas', 
+    'Walker',
+    2022 - 2002, 
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+const types = [];
+
+for(let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    // types[i] = typeof jonasArray[i];
+    types.push(typeof jonasArray[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++) {
+    ages.push(2022 - years[i]);
+}
+console.log(ages);
+
+// continue and break;
+for(let i = 0; i < jonasArray.length; i++) {
+    if(typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+for(let i = 0; i < jonasArray.length; i++) {
+    if(typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
 }
